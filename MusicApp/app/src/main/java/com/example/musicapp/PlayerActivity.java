@@ -57,6 +57,7 @@ public class PlayerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.Theme_MusicApp);
         setContentView(R.layout.activity_player);
 
         getSupportActionBar().setTitle("Now Playing");

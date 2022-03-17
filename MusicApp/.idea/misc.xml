@@ -4,12 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ivana/Documents/Kelas_PAM/MusicApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/ivana/Documents/PAM_MusicApp/MusicApp/app/src/main/res/drawable/ic_dot.xml" value="0.1935185185185185" />
         <entry key="..\:/Users/ivana/Documents/PAM_MusicApp/MusicApp/app/src/main/res/drawable/rounded_bg.xml" value="0.22205128205128205" />
         <entry key="..\:/Users/ivana/Documents/PAM_MusicApp/MusicApp/app/src/main/res/drawable/splash_image.xml" value="0.1935185185185185" />
-        <entry key="..\:/Users/ivana/Documents/PAM_MusicApp/MusicApp/app/src/main/res/layout/activity_main.xml" value="0.17753623188405798" />
+        <entry key="..\:/Users/ivana/Documents/PAM_MusicApp/MusicApp/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/ivana/Documents/PAM_MusicApp/MusicApp/app/src/main/res/layout/activity_player.xml" value="0.22" />
         <entry key="..\:/Users/ivana/Documents/PAM_MusicApp/MusicApp/app/src/main/res/layout/design.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/ivana/Documents/PAM_MusicApp/MusicApp/app/src/main/res/layout/list_item.xml" value="0.22" />
+        <entry key="..\:/Users/ivana/Documents/PAM_MusicApp/MusicApp/app/src/main/res/menu/main_menu.xml" value="0.209375" />
       </map>
     </option>
   </component>

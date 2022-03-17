@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
     android:orientation="vertical"
     tools:context=".PlayerActivity">
 
@@ -23,10 +22,8 @@
             android:padding="10dp"
             android:singleLine="true"
             android:text="Song Name"
-            android:textColor="@color/white"
             android:textSize="22sp"
             android:textAlignment="center"
-            android:textStyle="italic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -56,7 +53,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:textColor="@color/white"
                 android:text="0:10" />
             <TextView
                 android:id="@+id/txtEnd"
@@ -64,7 +60,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:textColor="@color/white"
                 android:text="0:10" />
         </RelativeLayout>
     </LinearLayout>

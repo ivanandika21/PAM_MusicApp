@@ -1,11 +1,13 @@
 package com.example.musicapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     ListView listViewLagu;
     String[] items;
+    private Toolbar mtoolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +42,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         listViewLagu = findViewById(R.id.listViewLagu);
+//        mtoolbar = findViewById(R.id.main_toolbar);
+//        setSupportActionBar(mtoolbar);
 
         runtimePermission();
     }
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        super.onCreateOptionsMenu(menu);
+//
+//        getMenuInflater().inflate(R.menu.main_menu, menu);
+//        return true;
+//    }
+
     public void runtimePermission() {
         Dexter.withContext(this).withPermissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO)
                 .withListener(new MultiplePermissionsListener() {
@@ -95,8 +109,8 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String songName = (String) listViewLagu.getItemAtPosition(i);
                 startActivity(new Intent(getApplicationContext(), PlayerActivity.class).putExtra("songs", mySongs)
-                .putExtra("songname", songName)
-                .putExtra("pos", i));
+                        .putExtra("songname", songName)
+                        .putExtra("pos", i));
             }
         });
     }

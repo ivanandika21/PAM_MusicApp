@@ -2,6 +2,7 @@ package com.example.musek;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,14 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.ViewHo
     public void onBindViewHolder(DataListAdapter.ViewHolder holder, int position) {
         DataModel laguData = laguList.get(position);
         holder.var_title.setText(laguData.getTitle());
+
+        if (LaguPlayer.currentIndex == position) {
+            holder.var_title.setTextColor(Color.parseColor("#29A5FF"));
+            holder.var_dot.setVisibility(View.VISIBLE);
+        } else {
+            holder.var_title.setTextColor(Color.parseColor("#000000"));
+            holder.var_dot.setVisibility(View.INVISIBLE);
+        }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

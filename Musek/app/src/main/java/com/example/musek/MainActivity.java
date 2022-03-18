@@ -77,4 +77,12 @@ public class MainActivity extends AppCompatActivity {
         } else
             ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, 123);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (var_recyclerView != null) {
+            var_recyclerView.setAdapter(new DataListAdapter(laguList, getApplicationContext()));
+        }
+    }
 }

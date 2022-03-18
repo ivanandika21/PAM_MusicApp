@@ -96,6 +96,8 @@ public class DetailActivity extends AppCompatActivity {
         var_pauseplay.setOnClickListener(view -> pausePlayLagu());
         var_next.setOnClickListener(view -> nextLagu());
         var_prev.setOnClickListener(view -> prevLagu());
+        var_ff.setOnClickListener(view -> ffLagu());
+        var_fr.setOnClickListener(view -> frLagu());
 
         playLagu();
     }
@@ -140,6 +142,18 @@ public class DetailActivity extends AppCompatActivity {
             mediaPlayer.pause();
         } else {
             mediaPlayer.start();
+        }
+    }
+
+    private void ffLagu() {
+        if (mediaPlayer.isPlaying()){
+            mediaPlayer.seekTo(mediaPlayer.getCurrentPosition()+10000);
+        }
+    }
+
+    private void frLagu() {
+        if (mediaPlayer.isPlaying()){
+            mediaPlayer.seekTo(mediaPlayer.getCurrentPosition()-10000);
         }
     }
 

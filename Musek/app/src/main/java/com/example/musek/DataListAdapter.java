@@ -24,7 +24,6 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.ViewHo
         this.context = context;
     }
 
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.row_item, parent, false);

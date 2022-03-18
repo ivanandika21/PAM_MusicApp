@@ -10,12 +10,12 @@
         android:id="@+id/id_detailTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="INIT TITLE"
-        android:textSize="22sp"
-        android:singleLine="true"
-        android:ellipsize="marquee"
         android:layout_centerHorizontal="true"
-        android:layout_marginHorizontal="20dp"/>
+        android:layout_marginHorizontal="20dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="INIT TITLE"
+        android:textSize="22sp" />
 
     <ImageView
         android:id="@+id/id_detailImage"

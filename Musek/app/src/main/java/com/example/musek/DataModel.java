@@ -6,11 +6,13 @@ public class DataModel implements Serializable {
     String path;
     String title;
     String duration;
+    String artist;
 
-    public DataModel(String path, String title, String duration) {
+    public DataModel(String path, String title, String duration, String artist) {
         this.path = path;
         this.title = title;
         this.duration = duration;
+        this.artist = artist;
     }
 
     public String getPath() {
@@ -35,5 +37,13 @@ public class DataModel implements Serializable {
 
     public void setDuration(String duration) {
         this.duration = duration;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
     }
 }

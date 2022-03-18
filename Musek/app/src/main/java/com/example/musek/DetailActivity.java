@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DetailActivity extends AppCompatActivity {
 
-    TextView var_detailTitle, var_txtStart, var_txtEnd;
+    TextView var_detailTitle, var_detailArtist, var_txtStart, var_txtEnd;
     SeekBar var_seekbar;
     ImageView var_detailImage, var_fr, var_prev, var_pauseplay, var_next, var_ff;
     ArrayList<DataModel> laguList;
@@ -30,6 +30,7 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         var_detailTitle = findViewById(R.id.id_detailTitle);
+        var_detailArtist = findViewById(R.id.id_detailArtist);
         var_txtStart = findViewById(R.id.id_txtStart);
         var_txtEnd = findViewById(R.id.id_txtEnd);
 
@@ -92,6 +93,7 @@ public class DetailActivity extends AppCompatActivity {
         currentLagu = laguList.get(LaguPlayer.currentIndex);
 
         var_detailTitle.setText(currentLagu.getTitle());
+        var_detailArtist.setText(currentLagu.getArtist());
         var_txtEnd.setText(convertToMS(currentLagu.getDuration()));
 
         var_pauseplay.setOnClickListener(view -> pausePlayLagu());

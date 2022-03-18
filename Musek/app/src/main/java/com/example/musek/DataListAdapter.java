@@ -37,6 +37,7 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.ViewHo
         DataModel laguData = laguList.get(position);
         holder.var_title.setText(laguData.getTitle());
         holder.var_duration.setText(convertToMS(laguData.getDuration()));
+        holder.var_artist.setText(laguData.getArtist());
 
         if (LaguPlayer.currentIndex == position) {
             holder.var_title.setTextColor(Color.parseColor("#29A5FF"));
@@ -70,7 +71,7 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView var_title, var_duration;
+        TextView var_title, var_duration, var_artist;
         ImageView var_dot;
 
         public ViewHolder(View itemView) {
@@ -78,6 +79,7 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.ViewHo
 
             var_title = itemView.findViewById(R.id.id_title);
             var_duration = itemView.findViewById(R.id.id_duration);
+            var_artist = itemView.findViewById(R.id.id_artist);
             var_dot = itemView.findViewById(R.id.id_dot);
 
             var_title.setSelected(true);

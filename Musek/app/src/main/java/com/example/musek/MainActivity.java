@@ -40,14 +40,19 @@ public class MainActivity extends AppCompatActivity {
         String[] projection = {
                 MediaStore.Audio.Media.TITLE,
                 MediaStore.Audio.Media.DATA,
-                MediaStore.Audio.Media.DURATION
+                MediaStore.Audio.Media.DURATION,
+                MediaStore.Audio.Media.ARTIST
         };
 
         String selection = MediaStore.Audio.Media.IS_MUSIC + " != 0";
 
         Cursor cursor = getContentResolver().query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, projection, selection, null, null);
         while (cursor.moveToNext()){
-            DataModel laguData = new DataModel(cursor.getString(1),cursor.getString(0),cursor.getString(2));
+            DataModel laguData = new DataModel(
+                    cursor.getString(1),
+                    cursor.getString(0),
+                    cursor.getString(2),
+                    cursor.getString(3));
 
             if (new File(laguData.getPath()).exists())
                 laguList.add(laguData);

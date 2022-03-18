@@ -40,7 +40,7 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.ViewHo
             holder.var_dot.setVisibility(View.VISIBLE);
         } else {
             holder.var_title.setTextColor(Color.parseColor("#000000"));
-            holder.var_dot.setVisibility(View.INVISIBLE);
+            holder.var_dot.setVisibility(View.GONE);
         }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

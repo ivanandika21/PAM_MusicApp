@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -119,6 +120,7 @@ public class DetailActivity extends AppCompatActivity {
     private void nextLagu() {
 
         if (LaguPlayer.currentIndex == laguList.size()-1) {
+            Toast.makeText(DetailActivity.this,"Anda sudah mencapai akhir antrian",Toast.LENGTH_SHORT).show();
             return;
         }
         LaguPlayer.currentIndex +=1;
@@ -129,6 +131,7 @@ public class DetailActivity extends AppCompatActivity {
     private void prevLagu() {
 
         if (LaguPlayer.currentIndex == 0) {
+            Toast.makeText(DetailActivity.this,"Anda sudah mencapai awal antrian",Toast.LENGTH_SHORT).show();
             return;
         }
         LaguPlayer.currentIndex -=1;

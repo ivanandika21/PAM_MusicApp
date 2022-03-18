@@ -2,24 +2,38 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:layout_margin="10dp">
 
     <ImageView
         android:layout_width="10dp"
         android:layout_height="10dp"
         android:id="@+id/id_dot"
         android:layout_centerVertical="true"
-        android:src="@drawable/ic_dot"/>
+        android:src="@drawable/ic_dot"
+        android:layout_marginEnd="10dp"/>
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:id="@+id/id_title"
-        android:layout_toEndOf="@id/id_dot"
-        android:padding="10dp"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:text="INIT TITLE"
-        android:textColor="@color/black"/>
+        android:layout_toEndOf="@id/id_dot">
+
+        <TextView
+            android:id="@+id/id_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="INIT TITLE"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Init Artist"
+            android:textSize="12sp"
+            android:layout_below="@id/id_title"
+            android:fontFamily="@font/medium"/>
+    </RelativeLayout>
+
 </RelativeLayout>

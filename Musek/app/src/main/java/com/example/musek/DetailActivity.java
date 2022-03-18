@@ -27,6 +27,7 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.Theme_Musek);
         setContentView(R.layout.activity_detail);
 
         var_detailTitle = findViewById(R.id.id_detailTitle);

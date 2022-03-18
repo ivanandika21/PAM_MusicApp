@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.Theme_Musek);
         setContentView(R.layout.activity_main);
 
         var_recyclerView = findViewById(R.id.id_recyclerView);

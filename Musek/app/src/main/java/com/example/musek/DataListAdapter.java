@@ -3,6 +3,7 @@ package com.example.musek;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.ViewHolder> {
 
@@ -34,9 +36,12 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.ViewHo
     public void onBindViewHolder(DataListAdapter.ViewHolder holder, int position) {
         DataModel laguData = laguList.get(position);
         holder.var_title.setText(laguData.getTitle());
+        holder.var_duration.setText(convertToMS(laguData.getDuration()));
 
         if (LaguPlayer.currentIndex == position) {
             holder.var_title.setTextColor(Color.parseColor("#29A5FF"));
+            holder.var_title.setHorizontallyScrolling(true);
+            holder.var_title.setEllipsize(TextUtils.TruncateAt.MARQUEE);
             holder.var_dot.setVisibility(View.VISIBLE);
         } else {
             holder.var_title.setTextColor(Color.parseColor("#000000"));
@@ -65,14 +70,24 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView var_title;
+        TextView var_title, var_duration;
         ImageView var_dot;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             var_title = itemView.findViewById(R.id.id_title);
+            var_duration = itemView.findViewById(R.id.id_duration);
             var_dot = itemView.findViewById(R.id.id_dot);
+
+            var_title.setSelected(true);
         }
+    }
+
+    public static String convertToMS(String duration) {
+        Long ms = Long.parseLong(duration);
+        return String.format("%02d:%02d",
+                TimeUnit.MILLISECONDS.toMinutes(ms) % TimeUnit.HOURS.toMinutes(1),
+                TimeUnit.MILLISECONDS.toSeconds(ms) % TimeUnit.MINUTES.toSeconds(1));
     }
 }

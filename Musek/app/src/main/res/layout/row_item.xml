@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp">
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="10dp">
 
     <ImageView
         android:layout_width="10dp"
@@ -21,19 +22,31 @@
             android:id="@+id/id_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="1"
             android:text="INIT TITLE"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="false"
+            android:ellipsize="end"
             android:textSize="16sp"
             android:textColor="@color/black"
             android:fontFamily="@font/bold"/>
         <TextView
+            android:id="@+id/id_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Init Duration"
+            android:textSize="12sp"
+            android:layout_marginEnd="5dp"
+            android:layout_below="@id/id_title"
+            android:fontFamily="@font/medium"/>
+        <TextView
+            android:id="@+id/id_artist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Init Artist"
+            android:layout_toEndOf="@+id/id_duration"
             android:textSize="12sp"
             android:layout_below="@id/id_title"
             android:fontFamily="@font/medium"/>
     </RelativeLayout>
-
 </RelativeLayout>

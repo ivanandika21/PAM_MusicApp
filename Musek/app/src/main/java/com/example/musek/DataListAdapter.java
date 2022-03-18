@@ -1,6 +1,7 @@
 package com.example.musek;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,20 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.ViewHo
     public void onBindViewHolder(DataListAdapter.ViewHolder holder, int position) {
         DataModel laguData = laguList.get(position);
         holder.var_title.setText(laguData.getTitle());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // navigate to detail
+                LaguPlayer.getInstance().reset();
+                LaguPlayer.currentIndex = position;
+
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("list", laguList);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

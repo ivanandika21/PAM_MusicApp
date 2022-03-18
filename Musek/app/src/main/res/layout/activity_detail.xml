@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <TextView
+        android:id="@+id/id_detailTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INIT TITLE"
+        android:textSize="22sp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="20dp"/>
+
+    <ImageView
+        android:id="@+id/id_detailImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@id/id_control"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_musiclogo" />
+
+    <RelativeLayout
+        android:id="@+id/id_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="50dp"
+        android:layout_alignParentBottom="true">
+
+        <SeekBar
+            android:id="@+id/id_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/id_controlText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_seekbar">
+            <TextView
+                android:id="@+id/id_txtStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INIT_S"/>
+            <TextView
+                android:id="@+id/id_txtEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="INIT_E"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/id_buttonControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_controlText"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/id_fr"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_fast_rewind"/>
+            <ImageView
+                android:id="@+id/id_prev"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_prev"/>
+            <ImageView
+                android:id="@+id/id_pauseplay"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_pause"/>
+            <ImageView
+                android:id="@+id/id_next"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_next"/>
+            <ImageView
+                android:id="@+id/id_ff"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_fast_forward"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

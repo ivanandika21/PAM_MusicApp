@@ -51,6 +51,13 @@ public class DetailActivity extends AppCompatActivity {
 
         setResourcesWithMusic();
 
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                nextLagu();
+            }
+        });
+
         DetailActivity.this.runOnUiThread(new Runnable() {
             @Override
             public void run() {

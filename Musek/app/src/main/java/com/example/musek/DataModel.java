@@ -7,6 +7,7 @@ public class DataModel implements Serializable {
     String title;
     String duration;
     String artist;
+    String albumart;
 
     public DataModel(String path, String title, String duration, String artist) {
         this.path = path;

@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Daftar Lagu"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:paddingVertical="10dp"
             android:textColor="@color/white"
             android:fontFamily="@font/bold"/>

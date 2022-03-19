@@ -90,15 +90,15 @@
 
             <ImageView
                 android:id="@+id/id_fr"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_margin="10dp"
                 android:src="@drawable/ic_fast_rewind" />
 
             <ImageView
                 android:id="@+id/id_prev"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_margin="10dp"
                 android:src="@drawable/ic_prev" />
 
@@ -111,15 +111,15 @@
 
             <ImageView
                 android:id="@+id/id_next"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_margin="10dp"
                 android:src="@drawable/ic_next" />
 
             <ImageView
                 android:id="@+id/id_ff"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_margin="10dp"
                 android:src="@drawable/ic_fast_forward" />
         </LinearLayout>

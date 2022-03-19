@@ -63,7 +63,7 @@ public class DetailActivity extends AppCompatActivity {
                         var_detailImage.setRotation(rot++);
                     } else {
                         var_pauseplay.setImageResource(R.drawable.ic_play);
-                        var_detailImage.setRotation(0);
+                        var_detailImage.setRotation(rot);
                     }
                 }
                 new Handler().postDelayed(this, 100);

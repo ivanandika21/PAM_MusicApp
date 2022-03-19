@@ -1,5 +1,6 @@
 package com.example.musek;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -33,7 +34,7 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(DataListAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(DataListAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         DataModel laguData = laguList.get(position);
         holder.var_title.setText(laguData.getTitle());
         holder.var_duration.setText(convertToMS(laguData.getDuration()));

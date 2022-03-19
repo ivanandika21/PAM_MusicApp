@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         if (laguList.size() == 0) {
             var_tidakDitemukan.setVisibility(View.VISIBLE);
         } else {
-            // recyclerview
+            // set data to recyclerview
             var_recyclerView.setLayoutManager(new LinearLayoutManager(this));
             var_recyclerView.setAdapter(new DataListAdapter(laguList, getApplicationContext()));
         }
